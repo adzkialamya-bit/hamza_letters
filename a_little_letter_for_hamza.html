@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Letter for Hamza ♡</title>
+<style>
+:root{--cream:#fbf5ef;--paper:#fffdfb;--pink:#f0dfe3;--rose:#b97986;--deep:#654a50;--muted:#887276;--line:#ead9d8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--deep);font-family:Georgia,"Times New Roman",serif;line-height:1.75}
+button{font:inherit;cursor:pointer}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 20px;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 20%,#fff 0,transparent 26%),radial-gradient(circle at 85% 75%,#f2e0e4 0,transparent 28%),var(--cream)}
+.float{position:absolute;color:#d9a7b0;opacity:.55;animation:drift 8s ease-in-out infinite;pointer-events:none}
+.float:nth-child(1){top:12%;left:12%;font-size:24px}.float:nth-child(2){top:24%;right:12%;font-size:17px;animation-delay:2s}.float:nth-child(3){bottom:14%;left:17%;font-size:19px;animation-delay:4s}.float:nth-child(4){bottom:22%;right:14%;font-size:25px;animation-delay:1s}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-14px) rotate(8deg)}}
+.hero-card{width:min(100%,620px);text-align:center;padding:clamp(26px,6vw,56px);background:rgba(255,253,251,.8);border:1px solid #eadbd6;border-radius:26px;box-shadow:0 18px 60px #9a737315;backdrop-filter:blur(5px);position:relative}
+.eyebrow{font:11px/1.5 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--rose)}
+.envelope{width:118px;height:82px;margin:28px auto 25px;position:relative;background:#efd6dc;border-radius:5px;box-shadow:0 8px 18px #b9798620;display:flex;align-items:center;justify-content:center;font-size:32px}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 49%,#e2bdc7 50%) left/50% 100% no-repeat,linear-gradient(215deg,transparent 49%,#e7c6cf 50%) right/50% 100% no-repeat;border-radius:5px}
+.envelope span{position:relative;z-index:1;transform:translateY(-2px)}
+h1{font-size:clamp(38px,8vw,62px);font-weight:normal;line-height:1.12;margin:12px 0}
+.subtitle{font-style:italic;color:var(--muted);font-size:18px;margin:14px auto 26px;max-width:400px}
+.primary,.secondary{border:0;border-radius:999px;padding:13px 24px;transition:transform .2s,box-shadow .2s}
+.primary{background:var(--rose);color:white;box-shadow:0 8px 20px #b979862e}
+.primary:hover,.secondary:hover{transform:translateY(-2px)}
+.secondary{background:transparent;border:1px solid #d8b8bf;color:var(--deep)}
+main{display:none}
+main.show{display:block;animation:fade .8s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.section{padding:82px 20px}
+.inner{width:min(100%,760px);margin:auto}
+.section-label{text-align:center;font:11px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:14px}
+h2{text-align:center;font-weight:normal;font-size:clamp(29px,5vw,42px);line-height:1.25;margin:0 0 26px}
+p{font-size:17px}
+.center{text-align:center}
+.letter{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,6vw,54px);box-shadow:0 14px 40px #75515a0b}
+.letter p{margin:0 0 20px}
+.pink-section{background:#f5e9eb}
+.quote{font-size:clamp(22px,4vw,30px);font-style:italic;text-align:center;line-height:1.55;margin:0 auto 18px;max-width:680px}
+.small-note{font-size:14px;color:var(--muted)}
+.end-card{text-align:center;padding:clamp(26px,6vw,54px);background:#fffaf8;border:1px solid var(--line);border-radius:22px}
+.heart{font-size:30px;color:var(--rose);animation:beat 1.8s ease-in-out infinite;display:inline-block}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+footer{text-align:center;padding:26px 16px 44px;color:var(--muted);font-size:13px}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+.music-panel{margin:24px auto 0;padding:16px;border:1px solid #ead9d8;border-radius:16px;background:#fffaf8;text-align:left;max-width:420px}
+.music-title{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:8px}
+.music-controls{display:flex;align-items:center;gap:10px;margin-top:12px}
+.music-btn{border:1px solid #dfc5ca;background:#f7e9ec;color:var(--deep);border-radius:999px;width:42px;height:42px;flex:0 0 42px}
+.music-btn:disabled{opacity:.45;cursor:not-allowed}
+.volume-wrap{display:flex;align-items:center;gap:8px;flex:1;font:12px Arial,sans-serif;color:var(--muted)}
+.volume-wrap input{width:100%;accent-color:var(--rose)}
+.file-label{display:inline-block;margin-top:8px;font:13px Arial,sans-serif;color:#9b6572;text-decoration:underline;cursor:pointer}
+.file-input{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.music-status{font:12px/1.5 Arial,sans-serif;color:var(--muted);margin:8px 0 0}
+
+</style>
+</head>
+<body>
+<section class="hero" id="welcome">
+  <span class="float">♡</span><span class="float">✧</span><span class="float">♡</span><span class="float">✦</span>
+  <div class="hero-card">
+    <div class="eyebrow">A little something for you</div>
+    <div class="envelope" aria-hidden="true"><span>♡</span></div>
+    <h1>Hey, Hamza.</h1>
+    <p class="subtitle">There's something I'd like you to know.</p>
+    <p class="small-note">A little letter, written with warmth.</p>
+    <button class="primary" id="openLetter">Open your letter&nbsp; ♡</button>
+    <div class="music-panel" aria-label="Romantic music player">
+      <div class="music-title">A song for this little letter ♫</div>
+      <div style="font-size:15px">Your favorite English love song</div>
+      <label class="file-label" for="songFile">Music ready: Beautiful In White — Saxophone Cover by Dori Wirawan</label>
+      <input class="file-input" type="file" id="songFile" accept="audio/*">
+      <div class="music-controls">
+        <button class="music-btn" id="playPause" aria-label="Play music" disabled>▶</button>
+        <div class="volume-wrap"><span>VOL</span><input id="volume" type="range" min="0" max="1" step="0.01" value="0.55" aria-label="Music volume"></div>
+      </div>
+      <p class="music-status" id="musicStatus">Choose a song file saved on your device. Music will start when the letter opens.</p>
+      <audio id="letterSong" preload="none" loop>
+  <source src="Beautiful In White (Saxophone Cover by Dori Wirawan).mp3" type="audio/mpeg"></audio>
+    </div>
+  </div>
+</section>
+
+<main id="letterContent">
+  <section class="section">
+    <div class="inner letter reveal">
+      <div class="section-label">A little thank you</div>
+      <h2>I'm glad our paths crossed.</h2>
+      <p>Dear Hamza,</p>
+      <p>I don't really know where to begin, but I guess the simplest place is with two words: <em>thank you.</em></p>
+      <p>Thank you for being someone I've had the chance to know. Thank you for the little moments, the conversations, and even the things that might seem ordinary but have somehow become meaningful to me.</p>
+      <p>Sometimes, we meet people without knowing how much of an impression they will leave on us. We don't always realize it in the moment, but certain people make our days a little brighter simply by being part of them.</p>
+      <p>And I think that's a beautiful thing.</p>
+      <p>I want you to know that I'm genuinely grateful our paths crossed. Whether we talk often or only occasionally, I hope you know that I wish nothing but good things for you.</p>
+    </div>
+  </section>
+
+  <section class="section pink-section">
+    <div class="inner reveal">
+      <div class="section-label">A wish for you</div>
+      <h2>May life be kind to you.</h2>
+      <p class="center">I hope life brings you happiness, gives you strength when things get difficult, and leads you toward all the dreams you've been quietly working for.</p>
+      <p class="center">You deserve to experience the kind of happiness that makes you smile without having to explain why.</p>
+      <p class="center">And if life ever gets overwhelming, I hope you remember that there are still people out there who sincerely wish you well, even from a distance.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner reveal">
+      <div class="section-label">Something from the heart</div>
+      <p class="quote">“Some feelings deserve to be expressed rather than left unspoken.”</p>
+      <p class="center">Maybe this letter is a little sentimental. Maybe these words are more than I usually say out loud. But I think some feelings deserve to be expressed rather than left unspoken.</p>
+      <p class="center">I don't want this message to be a goodbye, nor do I want it to be a promise about something neither of us can predict. I simply want it to be a little reminder that I'm glad to know you.</p>
+    </div>
+  </section>
+
+  <section class="section pink-section">
+    <div class="inner reveal">
+      <div class="section-label">Maybe, someday</div>
+      <h2>I'd love to know you a little more.</h2>
+      <p class="center">And honestly, I hope we get the chance to know each other better.</p>
+      <p class="center">I'd love for there to be more conversations, more laughter, more little moments to look back on someday and smile about. There's something lovely about the possibility of two people becoming a little closer, one conversation at a time, without having to rush anything.</p>
+      <p class="quote">“No rush, no expectations. Just the possibility of something lovely.”</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="inner end-card reveal">
+      <div class="heart">♡</div>
+      <div class="section-label">One last thing</div>
+      <h2>Thank you for being part of my little world.</h2>
+      <p>I hope this world gives you many reasons to be happy, and perhaps, if life is kind to us, it will give us more opportunities to share a few beautiful moments along the way.</p>
+      <p><strong>Until then, take good care of yourself.</strong></p>
+      <p>And if you ever wonder whether someone is wishing you happiness from somewhere in this world, I hope you'll remember this little letter.</p>
+      <p style="margin-top:30px;font-style:italic">With warmth, gratitude, and a quiet hope for the days ahead,</p>
+      <p style="font-size:21px;margin-bottom:0">Someone who is glad to know you. ♡</p>
+      <button class="secondary" id="backTop" style="margin-top:28px">Read it again ↑</button>
+    </div>
+  </section>
+  <footer>Made with a little warmth, just for Hamza ♡</footer>
+</main>
+<script>
+const openBtn=document.getElementById('openLetter');
+const content=document.getElementById('letterContent');
+openBtn.addEventListener('click',()=>{
+  content.classList.add('show');
+  content.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  content.scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('backTop').addEventListener('click',()=>document.getElementById('welcome').scrollIntoView({behavior:'smooth'}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+
+const songFile=document.getElementById('songFile');
+const audio=document.getElementById('letterSong');
+const playPause=document.getElementById('playPause');
+const volume=document.getElementById('volume');
+const musicStatus=document.getElementById('musicStatus');
+let audioObjectUrl=null;
+audio.volume=Number(volume.value);
+
+songFile.addEventListener('change',()=>{
+  const file=songFile.files && songFile.files[0];
+  if(!file) return;
+  if(audioObjectUrl) URL.revokeObjectURL(audioObjectUrl);
+  audioObjectUrl=URL.createObjectURL(file);
+  audio.src=audioObjectUrl;
+  audio.load();
+  playPause.disabled=false;
+  musicStatus.textContent='Selected: '+file.name+' · Music will start when you open the letter.';
+  playPause.textContent='▶';
+  playPause.setAttribute('aria-label','Play music');
+});
+
+volume.addEventListener('input',()=>{audio.volume=Number(volume.value)});
+
+async function startMusic(){
+  if(!audio.src){
+    musicStatus.textContent='Choose an audio file first to hear your song. You can still read the letter.';
+    return;
+  }
+  try{
+    await audio.play();
+    playPause.textContent='Ⅱ';
+    playPause.setAttribute('aria-label','Pause music');
+    musicStatus.textContent='Now playing · Let the music accompany your letter ♡';
+  }catch(e){
+    musicStatus.textContent='Tap play to start the music.';
+  }
+}
+playPause.addEventListener('click',async()=>{
+  if(!audio.src){
+    musicStatus.textContent='Choose an audio file first.';
+    return;
+  }
+  if(audio.paused){
+    try{await audio.play();playPause.textContent='Ⅱ';playPause.setAttribute('aria-label','Pause music');musicStatus.textContent='Now playing ♡';}
+    catch(e){musicStatus.textContent='This file could not be played in your browser.';}
+  }else{
+    audio.pause();playPause.textContent='▶';playPause.setAttribute('aria-label','Play music');musicStatus.textContent='Music paused.';
+  }
+});
+audio.addEventListener('ended',()=>{playPause.textContent='▶';playPause.setAttribute('aria-label','Play music')});
+const originalOpenHandler=openBtn.onclick;
+openBtn.addEventListener('click',()=>{startMusic()});
+
+</script>
+</body>
+</html>
